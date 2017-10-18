@@ -1,4 +1,5 @@
 Installation steps for Docker installation on Ubuntu
+please follow below steps for installing docker
 
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
@@ -9,24 +10,31 @@ sudo systemctl status docker
 ps -ef | grep docker
 docker --version
 
+#### start here below are sample docker commands 
 sudo docker run alpine /bin/sh
 sudo docker run -it alpine /bin/sh
 sudo docker run alpine ls -l
+#### end here below are sample docker commands 
 
-sudo docker run -it --rm -p 8088:8080 tomcat
 
-sudo docker run -d dockersamples/static-site
+sudo docker images --> to display docker images
+sudo docker ps -—> to know the running containers
+
+##### docker container stopping and removing it from running using container id
 sudo docker stop 6a3884611cc6
-sudo docker ps —> to know the running containers
-sudo docker rm  6a3884611cc6
-sudo docker run --name static-site -e AUTHOR="Your Name" -d -P dockersamples/static-site
-sudo docker port static-site
-sudo curl http://localhost:32768
-sudo docker run --name static-site-2 -e AUTHOR="Ananth Kannan" -d -p 8080:80 dockersamples/static-site
-sudo docker images
+sudo docker rm 6a3884611cc6
 
+####create docker image...
 sudo docker build . -t ananthkannan/myfirstapp
-sudo docker login --ananthkannan/P..a
-enter your docker hub crendetials
+sudo docker login 
+####enter your docker hub crendetials
+
 sudo docker push ananthkannan/myfirstapp
+
+#######How to run the container after pushing into repo
+
+sudo docker run -p 8080:5000 --name myfirstDockerApp1 ananth/myfirstapp
+
+### if you would like to run on differet port 
+sudo docker run -p 8090:5000 --name myfirstDockerApp1 ananth/myfirstapp
 
