@@ -24,8 +24,11 @@ sudo docker ps -—> to know the running containers
 sudo docker stop 6a3884611cc6
 sudo docker rm 6a3884611cc6
 
+clone the public repo locally of phython App.
 ####create docker image...
 sudo docker build . -t ananthkannan/myfirstapp
+sudo docker images 
+the above command will display docker images built.
 sudo docker login 
 ####enter your docker hub crendetials
 
@@ -33,8 +36,9 @@ sudo docker push ananthkannan/myfirstapp
 
 #######How to run the container after pushing into repo
 
-sudo docker run -p 8080:5000 --name myfirstDockerApp1 ananth/myfirstapp
+sudo docker run -p 8080:5000 --name myfirstApp1 ananthkannan/myfirstapp
 
 ### if you would like to run on differet port 
-sudo docker run -p 8090:5000 --name myfirstDockerApp1 ananth/myfirstapp
-
+sudo docker run -p 8090:5000 --name myfirstApp2 ananthkannan/myfirstapp
+Make sure you open port 8090 in security firewall rules.
+now go to browser enter the public dns name with port no 8090.  
