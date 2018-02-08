@@ -14,13 +14,24 @@ Please follow the below steps for lab exercises:
 sudo docker build . -t ananthkannan/myPhythonApp
 sudo docker login --ananthkannan/P..a
 enter your docker hub crendetials
-sudo docker push ananthkannan/myfirstapp
-sudo docker run --name static-site -e AUTHOR="Your Name" -d -P ananthkannan/myPhythonApp
+sudo docker push ananthkannan/myPhythonApp
+
+
+How to run application?
+
+sudo docker run -p 8080:5000 --name myfirstApp1 ananthkannan/myPhythonApp
+
+### if you would like to run on differet port 
+sudo docker run -p 8090:5000 --name myfirstApp2 ananthkannan/myfirstapp
+Make sure you open port 8090 in security firewall rules.
+now go to browser enter the public dns name with port no 8090.  
+
 
 
 sample commands for reference:
 sudo docker run alpine /bin/sh
 sudo docker run -it alpine /bin/sh
+
 sudo docker run alpine ls -l
 
 sudo docker run -it --rm -p 8088:8080 tomcat
