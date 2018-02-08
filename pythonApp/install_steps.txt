@@ -9,6 +9,16 @@ sudo systemctl status docker
 ps -ef | grep docker
 docker --version
 
+Please follow the below steps for lab exercises:
+
+sudo docker build . -t ananthkannan/myPhythonApp
+sudo docker login --ananthkannan/P..a
+enter your docker hub crendetials
+sudo docker push ananthkannan/myfirstapp
+sudo docker run --name static-site -e AUTHOR="Your Name" -d -P ananthkannan/myPhythonApp
+
+
+sample commands for reference:
 sudo docker run alpine /bin/sh
 sudo docker run -it alpine /bin/sh
 sudo docker run alpine ls -l
@@ -25,8 +35,4 @@ sudo curl http://localhost:32768
 sudo docker run --name static-site-2 -e AUTHOR="Ananth Kannan" -d -p 8080:80 dockersamples/static-site
 sudo docker images
 
-sudo docker build . -t ananthkannan/myfirstapp
-sudo docker login --ananthkannan/P..a
-enter your docker hub crendetials
-sudo docker push ananthkannan/myfirstapp
-
+Please do the 
