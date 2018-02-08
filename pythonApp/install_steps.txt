@@ -11,18 +11,18 @@ docker --version
 
 Please follow the below steps for lab exercises:
 
-sudo docker build . -t ananthkannan/myPhythonApp
+sudo docker build . -t ananthkannan/myphythonapp
 sudo docker login --ananthkannan/P..a
 enter your docker hub crendetials
-sudo docker push ananthkannan/myPhythonApp
+sudo docker push ananthkannan/myphythonapp
 
 
 How to run application?
 
-sudo docker run -p 8080:5000 --name myfirstApp1 ananthkannan/myPhythonApp
+sudo docker run -p 8080:5000 --name myfirstApp1 ananthkannan/myphythonapp
 
 ### if you would like to run on differet port 
-sudo docker run -p 8090:5000 --name myfirstApp2 ananthkannan/myfirstapp
+sudo docker run -p 8090:5000 --name myfirstApp2 ananthkannan/myphythonapp
 Make sure you open port 8090 in security firewall rules.
 now go to browser enter the public dns name with port no 8090.  
 
