@@ -19,10 +19,10 @@ sudo docker push ananthkannan/myphythonapp
 
 How to run application?
 
-sudo docker run -p 8080:5000 --name myfirstApp1 ananthkannan/myphythonapp
+sudo docker run -p 8080:5000 --rm --name myfirstApp1 ananthkannan/myphythonapp
 
 ### if you would like to run on differet port 
-sudo docker run -p 8090:5000 --name myfirstApp2 ananthkannan/myphythonapp
+sudo docker run -p 8090:5000 --rm --name myfirstApp2 ananthkannan/myphythonapp
 Make sure you open port 8090 in security firewall rules.
 now go to browser enter the public dns name with port no 8090.  
 
