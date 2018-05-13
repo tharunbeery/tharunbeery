@@ -43,3 +43,5 @@ $ sudo docker ps -a  list all the containers running/ran
 $ sudo docker run -it alpine /bin/sh  to run in interactive mode
 $ sudo docker stop <container_id>
 $ sudo docker rm  <container_id>
+
+sudo docker rmi image_id --> To delete the images
