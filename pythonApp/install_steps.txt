@@ -1,9 +1,11 @@
 Please follow the below steps for lab exercises:
 
-sudo docker build . -t ananthkannan/myphythonapp
+sudo docker build . -t user_name/myphythonapp
+sudo docker images
+the above command to see the image you had created
 sudo docker login
 enter your docker hub crendetials
-sudo docker push ananthkannan/myphythonapp
+sudo docker push user_name/myphythonapp
 
 
 How to run application?
