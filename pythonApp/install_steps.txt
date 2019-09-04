@@ -1,11 +1,13 @@
 Please follow the below steps for lab exercises:
 
 sudo docker build . -t your_docker_user_id/myphythonapp
+(note - change the above your_docker_user_id to userid you had created in cloud.docker.com)
 sudo docker images
 the above command to see the image you had created
 sudo docker login
 enter your docker hub crendetials
 sudo docker push your_docker_user_id/myphythonapp
+(note - change the above your_docker_user_id to userid you had created in cloud.docker.com)
 
 How to run application?
 
